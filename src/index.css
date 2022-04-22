@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.gameScreen {
+  display: flex;
+  flex-flow: wrap row;
+  width: 100%;
+  height: auto;
+}
+
+/* .moleBurrow {
+  width: 300px;
+} */
