@@ -14,9 +14,10 @@ function App() {
       // Adding components with props created to hills array
       hills.push(
         <MoleContainer
+        key={i}
         setScore={setScore}
         score={score} />
-      )
+      );
     };
     // Returning hills array containing MoleContainer components
     return (
