@@ -12,9 +12,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-h1 {
-  color: red;
-}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -38,6 +35,22 @@ h1 {
     transform: rotate(360deg);
   }
 }
+h1 {
+  font-family: system-ui, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
 .moles-container {
-  background: orange;
+  inline-size: 100%;
+  max-inline-size: 1200px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 4rem;
+}
+.score-container {
+  font-size: 2rem;
+  max-inline-size: min-content;
+  margin-inline: auto;
+  padding-block: 1rem;
 }

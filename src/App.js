@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import './index.css';
 // Components
 import MoleContainer from './components/MoleContainer';
 function App() {
@@ -28,8 +29,10 @@ function App() {
   };
   return (
     <div className="App">
-      <h1>react a mole!</h1>
-      {score}
+      <h1 className="app-header">react a mole!</h1>
+      <div className="score-container">
+        {score}
+      </div>
       <div className='moles-container'>
         {createMoleHill(8)}
       </div>
