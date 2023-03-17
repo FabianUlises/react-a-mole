@@ -1,35 +1,39 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 import './App.css';
-import MoleContainer from './MoleContainer';
-
+// Components
+import MoleContainer from './components/MoleContainer';
 function App() {
-  let [score, setScore] = useState(0)
-
-  const createMoleHill = () => {
-    let hills = []
-    for(let i=0; i < 9; i++){
+  // Score state
+  let [score,setScore] = useState(0)
+  // Funtion to create mole hill depending on number given
+  const createMoleHill = (n) => {
+    // Start with an empty array for hills
+    let hills = [];
+    // Loop through number given to create MoleContainer component and push to hills array
+    for(let i = 0; i < n; i++) {
+      // Adding components with props created to hills array
       hills.push(
         <MoleContainer
-          key={i}
-          setScore={setScore}
-          score={score}
-        />
+        setScore={setScore}
+        score={score} />
       )
-    }
-
+    };
+    // Returning hills array containing MoleContainer components
     return (
-      <div className='gameScreen'>
+      <>
         {hills}
-      </div>
+      </>
     )
-  }
+  };
   return (
     <div className="App">
-      <h1>React-a-Mole1</h1>
+      <h1>react a mole!</h1>
       {score}
-      {createMoleHill()}
+      <div className='moles-container'>
+        {createMoleHill(8)}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
