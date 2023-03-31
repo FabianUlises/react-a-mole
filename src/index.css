@@ -11,6 +11,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: hsl(210 15% 2%);
   color: hsl(210 15% 98%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
 }
 
 code {
